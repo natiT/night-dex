@@ -40,6 +40,10 @@ class Dex {
             }
             else {
                 let pokemonName = pokemon.names.en.toLowerCase();
+                var result = pokemon.name === query || pokemonName === query;
+                if (!result) {
+                     pokemonName = pokemon.names.de.toLowerCase();
+               }
                 return pokemon.name === query || pokemonName === query;
             }
         });
@@ -68,7 +72,7 @@ class Dex {
         const re = new RegExp(query);
 
         return this.db.pokemons.filter(p => {
-            const name = p.names.en.toLowerCase();
+            const name = p.names.de.toLowerCase();
             const s = calcSimilarity(name, query);
             return (s >= 0.5) || name.match(re);
         });
