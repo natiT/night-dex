@@ -1,5 +1,7 @@
 # A Pokedéx command for Pokémon Twitch Streamers
 
+Thanks Victor he developted the original Version just added posibility to write german PKMN names. https://github.com/victornpb/night-dex
+
 
 
 Usage
